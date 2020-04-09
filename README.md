@@ -1,6 +1,14 @@
 # brandi-teacher-website
 
 ## TODO:
+* Post homework
+* Communication page (?)
+* Share news and announcements
+* Display class photos
+* Provide resource links
+* Create a class calendar
+
+## IDEAS:
 * Calendar
 * Announcements
 * Homework resources
