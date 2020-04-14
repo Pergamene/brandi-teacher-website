@@ -8,6 +8,7 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
+    fontFamily: `'Amatic SC', cursive`,
   },
   header: {
     display: 'flex',
@@ -29,16 +30,16 @@ const useStyles = makeStyles({
   h2: {
     margin: 0,
     alignSelf: 'center',
-    fontSize: '30px',
+    fontSize: '38px',
   },
   day: {
     boxSizing: 'border-box',
     width: '14.2857%',
     height: '100%',
     borderRight: '2px solid #000',
-    padding: '10px 0',
+    padding: '5px 0',
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontSize: '26px',
     '&:last-child': {
       borderRight: 'none',
     },
