@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Announcements = props => {
+  const { signedIn } = props;
 
   return (
-    <div></div>
+    <div>Announcements!</div>
   );
 };
 
