@@ -7,7 +7,8 @@ import Login from './components/Login';
 import Announcements from './components/Announcements';
 import Bio from './components/Bio';
 import Calendar from './components/calendar/Calendar';
- 
+import Photos from './components/Photos';
+
 const useStyles = makeStyles({
   root: {
     maxWidth: '1000px',
@@ -39,6 +40,9 @@ const App = () => {
       </Route>
       <Route exact path="/calendar">
         <Calendar isSignedIn={isSignedIn} />
+      </Route>
+      <Route exact path="/photos">
+        <Photos isSignedIn={isSignedIn} />
       </Route>
     </div>
   );
