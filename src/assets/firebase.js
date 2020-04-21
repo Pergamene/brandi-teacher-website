@@ -28,4 +28,15 @@ export const storageRef = firebase.storage().ref();
 // Setup database
 export const db = firebase.firestore();
 
+// Watch for Auth changes
+export const watchAuth = setSignedIn => {
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      setSignedIn(true);
+    } else {
+      setSignedIn(false);
+    }
+  });
+}
+
 export default firebase;

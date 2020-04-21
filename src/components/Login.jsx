@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { auth } from '../assets/firebase';
+import firebase, { auth } from '../assets/firebase';
 
 const useStyles = makeStyles({
   root: {
@@ -39,9 +39,8 @@ const emptyCredentials = {
   password: '',
 };
 
-const Login = props => {
+const Login = () => {
   const classes = useStyles();
-  const { setIsSignedIn } = props;
   const history = useHistory();
   const [credentials, setCredentials] = useState(emptyCredentials);
 
@@ -58,9 +57,9 @@ const Login = props => {
   const handleSubmit = async event => {
     event.preventDefault();
     try { 
+      await auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
       const { user } = await auth.signInWithEmailAndPassword(credentials.email, credentials.password);
       if (user) {
-        setIsSignedIn(true);
         history.push('/');
       }
     } catch(err) {

@@ -10,7 +10,6 @@ const Announcements = props => {
   useEffect(() => {
     const getAnnouncement = async () => {
       const doc = await docRef.get();
-      console.log(`${doc.id} => ${doc.data()}`);
       setPost(doc.data());
     };
     getAnnouncement();

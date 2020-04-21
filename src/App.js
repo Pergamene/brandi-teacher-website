@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -8,6 +8,8 @@ import Announcements from './components/Announcements';
 import Bio from './components/Bio';
 import Calendar from './components/calendar/Calendar';
 import Photos from './components/Photos';
+
+import { watchAuth } from './assets/firebase';
 
 const useStyles = makeStyles({
   root: {
@@ -21,6 +23,10 @@ const useStyles = makeStyles({
 const App = () => {
   const classes = useStyles();
   const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    watchAuth(setSignedIn);
+  }, []);
 
   const setSignedIn = signedIn => {
     setIsSignedIn(signedIn);
