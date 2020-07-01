@@ -17,6 +17,9 @@ const useStyles = makeStyles({
     borderTop: 'none',
     padding: '0 20px 20px',
   },
+  h2: {
+    fontSize: '2rem',
+  },
 });
 
 const Announcements = props => {
@@ -34,7 +37,7 @@ const Announcements = props => {
 
   return (
     <div className={classes.root}>
-      <h2>Announcements!</h2>
+      <h2 className={classes.h2}>Announcements!</h2>
       <div>
         {posts.map((post, index) => {
           return <Post content={post} signedIn={signedIn} type={PostType.ANNOUNCEMENTS} key={index} />

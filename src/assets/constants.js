@@ -17,4 +17,5 @@ export const statusCodes = {
 export const colors = {
   GOLD: '#CFB53B',
   BACKGROUND_COLOR: '#FFF',
+  QUOTE: '#EFEFEF',
 }

@@ -6,24 +6,25 @@ import TextField from '@material-ui/core/TextField';
 import EditIcon from '@material-ui/icons/Edit';
 import DoneIcon from '@material-ui/icons/Done';
 // import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { colors } from '../../assets/constants';
+import Paper from '@material-ui/core/Paper';
 
 import Partition from './Partition';
 
 const useStyles = makeStyles({
   root: {
-    background: 'red',
-    paddingBottom: '15px',
-    marginBottom: '15px',
-    borderBottom: `1px solid ${colors.GOLD}`,
+    padding: '15px',
+    marginBottom: '30px',
+  },
+  container: {
     display: 'flex',
-    width: '100%',
+    fontFamily: 'Comic Neue',
+  },
+  post: {
+    flex: 1,
   },
   buttons: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-around',
-    background: 'blue',
   },
 });
 
@@ -56,28 +57,29 @@ const Post = props => {
   // };
 
   return (
-    <Fragment>
+    <Paper className={classes.root} elevation={6}>
       {isEditing ? (
-        <div className={classes.root}>
-          <TextField onChange={handleChange} multiline fullWidth variant="outlined" value={markdown} />
-          <DoneIcon onClick={handleStopEdit} fontSize="large" />
+        <div className={classes.container}>
+          <TextField onChange={handleChange} multiline fullWidth variant="filled" value={markdown} />
+          <div className={classes.buttons}>
+            <DoneIcon className={classes.buttons} onClick={handleStopEdit} fontSize="large" />
+            {/* @TODO: add delete */}
+            {/* <DeleteForeverIcon onClick={handleDelete} fontSize="large" /> */}
+          </div>
         </div>
       ) : (
-        <div className={classes.root}>
-          <div>
+        <div className={classes.container}>
+          <div className={classes.post}>
             {content.map((partition, index) => {
               return <Partition partition={partition} key={index} />;
-              // return <div key={index}>{JSON.stringify(partition)}</div>;
             })}
           </div>
           {true && <div className={classes.buttons}>
             <EditIcon onClick={handleEdit} fontSize="large" />
-            {/* @TODO: add delete */}
-            {/* <DeleteForeverIcon onClick={handleDelete} fontSize="large" /> */}
           </div>}
         </div>
       )}
-    </Fragment>
+    </Paper>
   );
 };
 

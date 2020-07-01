@@ -18,6 +18,8 @@ const useStyles = makeStyles({
     margin: '50px auto',
     border: `2px solid ${colors.GOLD}`,
     padding: '5px',
+    fontSize: '1rem',
+    lineHeight: '1.6rem',
   },
 });
 
