@@ -1,4 +1,4 @@
-class CalendarService {
+class Calendar {
   static getWeeks(offset, days) {
     const weeks = [];
     let week = [];
@@ -30,4 +30,4 @@ class CalendarService {
   }
 }
 
-export default CalendarService;
+export default Calendar;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import CalendarService from '../../services/CalendarService';
+import CalendarHelpers from '../../utils/Calendar';
 
 import DayDate from './DayDate';
 import DayStatusBar from './DayStatusBar';
@@ -30,7 +30,7 @@ const Day = props => {
   const [status, setStatus] = useState(null);
 
   useEffect(() => {
-    const statusSet = CalendarService.getStatus(data);
+    const statusSet = CalendarHelpers.getStatus(data);
     setStatus(statusSet);
   }, [data]);
 

@@ -10,12 +10,13 @@ import Calendar from './components/calendar/Calendar';
 import Photos from './components/Photos';
 
 import { watchAuth } from './assets/firebase';
+import { colors } from './assets/constants';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: '1000px',
     margin: '50px auto',
-    border: '2px solid #cfb53b',
+    border: `2px solid ${colors.GOLD}`,
     padding: '5px',
   },
 });

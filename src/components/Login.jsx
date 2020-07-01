@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 
 import firebase, { auth } from '../assets/firebase';
+import { colors } from '../assets/constants';
 
 const useStyles = makeStyles({
   root: {
@@ -13,9 +14,9 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     width: '300px',
     padding: '20px',
-    border: '1px solid #CBCBCB',
+    border: `1px solid ${colors.GOLD}`,
     borderRadius: '5px',
-    backgroundColor: '#FFF',
+    backgroundColor: `${colors.BACKGROUND_COLOR}`,
   },
   button: {
     margin: '0 auto',
@@ -23,10 +24,10 @@ const useStyles = makeStyles({
   },
   label: {
     position: 'fixed',
-    color: '#CBCBCB',
+    color: `${colors.GOLD}`,
     fontSize: '12px',
     padding: '0 5px',
-    backgroundColor: '#FFF',
+    backgroundColor: `${colors.BACKGROUND_COLOR}`,
     transform: 'translate(-160px, -7px)',
   },
   input: {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
-import CalendarService from '../../services/CalendarService';
+import CalendarHelpers from '../../utils/Calendar';
 
 import Week from './Week';
 
@@ -18,7 +18,7 @@ const Month = props => {
   const [weeks, setWeeks] = useState([]);
 
   useEffect(() => {
-    const weeksArr = CalendarService.getWeeks(data.offset, data.days);
+    const weeksArr = CalendarHelpers.getWeeks(data.offset, data.days);
     setWeeks(weeksArr);
   }, [data]);
 

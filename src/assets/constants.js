@@ -1,8 +1,10 @@
 // Events
-export const DUE_DATE = 'dueDate';
-export const NO_SCHOOL = 'noSchool';
-export const SCHOOL_EVENT = 'schoolEvent';
-export const FIELD_TRIP = 'fieldTrip';
+export const events = {
+  DUE_DATE: 'dueDate',
+  NO_SCHOOL: 'noSchool',
+  SCHOOL_EVENT: 'schoolEvent',
+  FIELD_TRIP: 'fieldTrip',
+}
 
 export const statusCodes = {
   dueDate: '#BA000D',
@@ -12,5 +14,7 @@ export const statusCodes = {
 };
 
 // Colors
-export const GOLD = '#CFB53B';
-export const BACKGROUND_COLOR = '#FFF';
+export const colors = {
+  GOLD: '#CFB53B',
+  BACKGROUND_COLOR: '#FFF',
+}

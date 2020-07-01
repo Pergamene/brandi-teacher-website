@@ -1,6 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 
+import { colors } from '../assets/constants';
+
 import headshot from '../assets/headshot.jpg';
 import family from '../assets/family.jpg'
 
@@ -8,9 +10,9 @@ const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: '#fff',
+    backgroundColor: `${colors.BACKGROUND_COLOR}`,
     margin: '0 auto',
-    border: '2px solid #cfb53b',
+    border: `2px solid ${colors.GOLD}`,
     borderTop: 'none',
     padding: '0 20px 20px',
   },
@@ -28,7 +30,7 @@ const useStyles = makeStyles({
     flexDirection: 'column',
   },
   img: {
-    border: '2px solid #cfb53b',
+    border: `2px solid ${colors.GOLD}`,
     padding: '5px',
     height: '400px',
   },

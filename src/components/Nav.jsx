@@ -4,13 +4,14 @@ import IconButton from '@material-ui/core/IconButton';
 import PersonIcon from '@material-ui/icons/Person';
 
 import { auth } from '../assets/firebase';
+import { colors } from '../assets/constants';
 
 const useStyles = makeStyles({
   root: {
     height: '100px',
     margin: '0 auto',
-    backgroundColor: '#fff',
-    border: '2px solid #cfb53b',
+    backgroundColor: `${colors.BACKGROUND_COLOR}`,
+    border: `2px solid ${colors.GOLD}`,
     borderBottom: 'none',
     padding: '20px 20px 0',
   },
